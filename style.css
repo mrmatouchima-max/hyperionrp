@@ -14,14 +14,13 @@
 }
 
 .bluemap {
-  background: #121212;
-  padding: 3em 1em;
-  min-height: 300px;
+ width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 12px;
 }
 
 .map-placeholder {
-  background: #1f1f1f;
-  padding: 2em;
-  border-radius: 12px;
   color: #aaa;
+  margin-top: 10px;
 }
