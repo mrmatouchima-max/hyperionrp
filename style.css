@@ -1,25 +1,106 @@
+/* Mise en forme du corps */
+body {
+  background-color: #111; /* Fond sombre */
+  color: white; /* Texte blanc */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p {
+  color: white; /* Texte en blanc */
+}
+
+/* Style de la barre de navigation */
 .nav-fixe {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #111;
+  background: #111; /* Fond sombre pour la navbar */
   padding: 12px;
   z-index: 999;
 }
+
 .nav-fixe a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px;
 }
 
+.nav-fixe a:hover {
+  color: #2ecc71; /* Ajout d'un survol vert */
+}
+
+/* Style des boutons */
+button {
+  background-color: #2ecc71; /* Vert vif */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #27ae60; /* Vert foncé sur hover */
+}
+
+/* Section de l'équipe */
+.staff-section {
+  background-color: #1d1d1d;
+  padding: 50px 20px;
+}
+
+.staff-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.staff-card {
+  background: #333;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 25%;
+}
+
+.staff-card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.badge {
+  background-color: #f39c12;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Style de la carte BlueMap */
 .bluemap {
- width: 100%;
-  height: 700px;
+  width: 100%;
+  height: 600px;
   border: none;
   border-radius: 12px;
 }
 
+/* Style des sections et footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Placeholder carte */
 .map-placeholder {
   color: #aaa;
   margin-top: 10px;
