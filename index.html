@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HyperionRP - Serveur Minecraft</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="accueil">
+
+  <!-- Menu de navigation fixe -->
+  <nav class="nav-fixe">
+    <a href="#accueil">🏠 Accueil</a>
+    <a href="#staff">👑 Staff</a>
+    <a href="#boutique">🛍️ Boutique</a>
+    <a href="#recrutement">📋 Recrutement</a>
+  </nav>
+
+  <header>
+    <img src="banniere.png" alt="Bannière HyperionRP" class="banner" />
+    <h1>HyperionRP</h1>
+    <p class="tagline">Plonge dans un monde où chaque joueur écrit sa propre histoire — bienvenue sur HyperionRP</p>
+    <div class="buttons">
+      <button onclick="copyIP()">📋 Copier l’IP</button>
+      <a href="https://discord.gg/fgDnGahS" target="_blank"><button>💬 Rejoindre le Discord</button></a>
+    </div>
+  </header>
+
+  <!-- Section Staff -->
+  <section id="staff" class="staff-section">
+    <h2>👑 L'Équipe HyperionRP</h2>
+    <div class="staff-cards">
+      <div class="staff-card">
+        <img src="https://mc-heads.net/avatar/mz_dragon" alt="mz_dragon">
+        <h3>mz_dragon <span class="badge">Gérant Staff</span></h3>
+        <p>Responsable de la gestion et de l'organisation du serveur.</p>
+      </div>
+      <div class="staff-card">
+        <img src="https://mc-heads.net/avatar/tatane" alt="tatane">
+        <h3>tatane <span class="badge">Aide Développeur</span></h3>
+        <p>Assiste dans le développement et les correctifs techniques.</p>
+      </div>
+      <div class="staff-card">
+        <img src="https://mc-heads.net/avatar/le%20chat%20fumeur" alt="le chat fumeur">
+        <h3>le chat fumeur <span class="badge">Aide Développeur</span></h3>
+        <p>Apporte son soutien dans la configuration et les scripts RP.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Boutique avec bouton PayPal -->
+  <section id="boutique" class="boutique-externe">
+      <section class="boutique-externe">
+  <h2>💖 Soutenir HyperionRP</h2>
+  <h3>👇💸 Faire un don via PayPal--abonnement grade vip👇</h3>
+  <div class="boutons-paypal">
+    <div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'XJR5C9VCEGKCG',
+image: {
+src:'https://pics.paypal.com/00/s/OWQ5YTg1NDUtZmI4MC00Y2I3LWJjNTQtMmM1ODc0MjlkNGUz/file.PNG',
+alt:'Bouton Faites un don avec PayPal',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
+    
+    <style>.pp-NHXUCRP2CSPVE{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+<form action="https://www.paypal.com/ncp/payment/NHXUCRP2CSPVE" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+  <input class="pp-NHXUCRP2CSPVE" type="submit" value="Acheter" />
+  <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+  <section style="font-size: 0.75rem;"> Optimisé par <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+</form>
+ </section>
+    
+   <!-- Section Recrutement avec Google Form -->
+  <section id="recrutement" class="recrutement">
+    <h2>📋 Formulaire de Recrutement</h2>
+    <iframe
+    
+      src="https://docs.google.com/forms/d/e/1FAIpQLSck46po1bWV6uiB4I4J8fyqy36n4W1wVD58dL1YIvkUDzQL6A/viewform?embedded=true"
+      width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0"
+      style="background:#fff;border-radius:12px;">
+      Chargement…
+    </iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HyperionRP. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText("hyperionrp.aternos.me");
+      alert("IP copiée : hyperionrp.aternos.me");
+    }
+  </script>
+</body>
+</html>
