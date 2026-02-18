@@ -25,19 +25,25 @@
   </p>
 
   <div class="buttons">
-    <button onclick="copyIP()">📋 Copier l’IP</button>
-    <a href="https://discord.gg/fgDnGahS" target="_blank" rel="noopener noreferrer">
-      <button>💬 Discord</button>
-    </a>
-  </div>
-</header>
+  <button id="copy-ip-btn">📋 Copier l’IP</button>
+  <a href="https://discord.gg/fgDnGahS" target="_blank" rel="noopener noreferrer">
+    <button>💬 Discord</button>
+  </a>
+</div>
+
+<!-- Notification premium -->
+<div id="ip-popup" class="ip-popup">
+  🚀 IP copiée !<br>
+  <span>ships-alarm.gl.joinmc.link</span>
+</div>
+
 
 <section id="map">
   <h2>🗺️ Carte du Monde RP</h2>
   <div class="map-container">
     <iframe
       class="bluemap"
-      src="https://ships-alarm.gl.joinmc.link:8100/"
+      src="http://ships-alarm.gl.joinmc.link:8100/"
       allowfullscreen>
     </iframe>
   </div>
