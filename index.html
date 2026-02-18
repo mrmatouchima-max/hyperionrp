@@ -25,25 +25,19 @@
   </p>
 
   <div class="buttons">
-  <button id="copy-ip-btn">📋 Copier l’IP</button>
-  <a href="https://discord.gg/fgDnGahS" target="_blank" rel="noopener noreferrer">
-    <button>💬 Discord</button>
-  </a>
-</div>
-
-<!-- Notification premium -->
-<div id="ip-popup" class="ip-popup">
-  🚀 IP copiée !<br>
-  <span>ships-alarm.gl.joinmc.link</span>
-</div>
-
+    <button id="copy-ip-btn">📋 Copier l’IP</button>
+    <a href="https://discord.gg/fgDnGahS" target="_blank" rel="noopener noreferrer">
+      <button>💬 Discord</button>
+    </a>
+  </div>
+</header>
 
 <section id="map">
   <h2>🗺️ Carte du Monde RP</h2>
   <div class="map-container">
     <iframe
       class="bluemap"
-      src="http://ships-alarm.gl.joinmc.link:8100/"
+      src="https://ships-alarm.gl.joinmc.link:8100/"
       allowfullscreen>
     </iframe>
   </div>
@@ -99,27 +93,28 @@
   <p>© 2025 HyperionRP — Tous droits réservés</p>
 </footer>
 
-<!-- Notification premium -->
-<div id="copy-notif" class="copy-notif">
+<!-- Pop-up IP -->
+<div id="ip-popup" class="ip-popup">
   🚀 IP copiée !<br>
   <span>ships-alarm.gl.joinmc.link</span>
 </div>
 
 <script>
-function copyIP() {
-  navigator.clipboard.writeText("ships-alarm.gl.joinmc.link");
+const copyBtn = document.getElementById('copy-ip-btn');
+const ipPopup = document.getElementById('ip-popup');
 
-  const notif = document.getElementById("copy-notif");
-  notif.classList.add("show");
+copyBtn.addEventListener('click', () => {
+  navigator.clipboard.writeText('ships-alarm.gl.joinmc.link');
+  ipPopup.classList.add('show');
 
   const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3");
   audio.volume = 0.15;
   audio.play();
 
   setTimeout(() => {
-    notif.classList.remove("show");
-  }, 3000);
-}
+    ipPopup.classList.remove('show');
+  }, 2500);
+});
 </script>
 
 </body>
