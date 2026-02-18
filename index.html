@@ -105,12 +105,16 @@ const ipPopup = document.getElementById('ip-popup');
 
 copyBtn.addEventListener('click', () => {
   navigator.clipboard.writeText('ships-alarm.gl.joinmc.link');
+
+  // Affiche la pop-up
   ipPopup.classList.add('show');
 
+  // Joue un son
   const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3");
   audio.volume = 0.15;
   audio.play();
 
+  // Masque la pop-up après 2,5 secondes
   setTimeout(() => {
     ipPopup.classList.remove('show');
   }, 2500);
