@@ -32,54 +32,49 @@
   </div>
 </header>
 
-  <!-- Carte du monde -->
 <section id="map">
   <h2>🗺️ Carte du Monde RP</h2>
   <div class="map-container">
     <iframe
       class="bluemap"
-      src="http://127.0.0.1:8100/#world:-753:0:-238:1500:0:0:0:0:perspective"
+      src="http://ships-alarm.gl.joinmc.link:8100/"
       allowfullscreen>
     </iframe>
   </div>
   <p class="map-placeholder">Carte mise à jour en temps réel via BlueMap</p>
 </section>
 
-<!-- STAFF -->
 <section id="staff" class="staff-section">
   <h2>👑 L'Équipe HyperionRP</h2>
 
   <div class="staff-cards">
     <div class="staff-card">
       <img src="https://mc-heads.net/avatar/mz_dragon">
-      <h3>matouchima <span class="badge">fondateur</span></h3>
-  </div>
-  
-  <div class="staff-cards">
-    <div class="staff-card">
-      <img src="https://mc-heads.net/avatar/mz_dragon">
-      <h3>le chat fumeur <span class="badge">co-fondateur</span></h3>
-    </div>
-
-    <div class="staff-card">
-      <img src="https://mc-heads.net/avatar/tatane">
-      <h3>tatane <span class="badge">co-fondateur</span></h3>
+      <h3>matouchima <span class="badge">Fondateur</span></h3>
     </div>
 
     <div class="staff-card">
       <img src="https://mc-heads.net/avatar/le%20chat%20fumeur">
-      <h3>mz_dragon <span class="badge">gerant staff</span></h3>
+      <h3>le chat fumeur <span class="badge">Co-Fondateur</span></h3>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/tatane">
+      <h3>tatane <span class="badge">Co-Fondateur</span></h3>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/mz_dragon">
+      <h3>mz_dragon <span class="badge">Gérant Staff</span></h3>
     </div>
   </div>
 </section>
 
-<!-- BOUTIQUE -->
 <section id="boutique" class="boutique">
   <h2>💖 Soutenir le serveur</h2>
   <p>Abonnement VIP & dons PayPal</p>
 </section>
 
-<!-- RECRUTEMENT -->
 <section id="recrutement" class="recrutement">
   <h2>📋 Recrutement Staff</h2>
   <iframe
@@ -91,10 +86,26 @@
   <p>© 2025 HyperionRP — Tous droits réservés</p>
 </footer>
 
+<!-- Notification premium -->
+<div id="copy-notif" class="copy-notif">
+  🚀 IP copiée !<br>
+  <span>ships-alarm.gl.joinmc.link</span>
+</div>
+
 <script>
 function copyIP() {
-  navigator.clipboard.writeText("hyperionrp.aternos.me");
-  alert("IP copiée !");
+  navigator.clipboard.writeText("ships-alarm.gl.joinmc.link");
+
+  const notif = document.getElementById("copy-notif");
+  notif.classList.add("show");
+
+  const audio = new Audio("https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3");
+  audio.volume = 0.15;
+  audio.play();
+
+  setTimeout(() => {
+    notif.classList.remove("show");
+  }, 3000);
 }
 </script>
 
