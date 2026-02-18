@@ -1,71 +1,93 @@
-/* Mise en forme du corps */
 body {
-  background-color: #111; /* Fond sombre */
-  color: white; /* Texte blanc */
+  background: linear-gradient(135deg, #0f0f1a, #1a0033);
+  color: white;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, p {
-  color: white; /* Texte en blanc */
-}
-
-/* Style de la barre de navigation */
 .nav-fixe {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #111; /* Fond sombre pour la navbar */
+  background: rgba(15,15,25,0.9);
+  backdrop-filter: blur(10px);
   padding: 12px;
   z-index: 999;
+  text-align: center;
 }
 
 .nav-fixe a {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
+  transition: 0.3s;
 }
 
 .nav-fixe a:hover {
-  color: #2ecc71; /* Ajout d'un survol vert */
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff;
 }
 
-/* Style des boutons */
+header {
+  padding-top: 120px;
+  text-align: center;
+}
+
 button {
-  background-color: #2ecc71; /* Vert vif */
+  background: linear-gradient(45deg, #6a0dad, #00ccff);
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 14px 24px;
+  border-radius: 12px;
   color: white;
   font-size: 16px;
   cursor: pointer;
   margin: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
 }
 
 button:hover {
-  background-color: #27ae60; /* Vert foncé sur hover */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 0 20px rgba(138, 43, 226, 0.8),
+    0 0 35px rgba(0, 204, 255, 0.6);
 }
 
-/* Section de l'équipe */
+button:active {
+  transform: scale(0.95);
+}
+
+.bluemap {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,204,255,0.4);
+}
+
 .staff-section {
-  background-color: #1d1d1d;
+  background: #140022;
   padding: 50px 20px;
 }
 
 .staff-cards {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .staff-card {
-  background: #333;
-  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
   padding: 20px;
   text-align: center;
-  width: 25%;
+  width: 220px;
+  margin: 10px;
+  box-shadow: 0 0 20px rgba(138,43,226,0.3);
 }
 
 .staff-card img {
@@ -74,34 +96,47 @@ button:hover {
 }
 
 .badge {
-  background-color: #f39c12;
+  background: linear-gradient(45deg,#ff00cc,#3333ff);
   padding: 5px 10px;
-  border-radius: 5px;
-  color: white;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
-/* Style de la carte BlueMap */
-.bluemap {
-  width: 100%;
-  height: 600px;
-  border: none;
-  border-radius: 12px;
-}
-
-/* Style des sections et footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #111;
-  color: white;
+  background: #0f0f1a;
 }
 
-footer p {
-  margin: 0;
+/* Notification premium */
+.copy-notif {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px) scale(0.9);
+  backdrop-filter: blur(15px);
+  background: rgba(20, 20, 30, 0.8);
+  border: 1px solid rgba(138, 43, 226, 0.6);
+  padding: 18px 40px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 9999;
+  box-shadow:
+    0 0 20px rgba(138, 43, 226, 0.7),
+    0 0 40px rgba(0, 204, 255, 0.4);
 }
 
-/* Placeholder carte */
-.map-placeholder {
-  color: #aaa;
-  margin-top: 10px;
+.copy-notif span {
+  font-size: 16px;
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff;
+}
+
+.copy-notif.show {
+  transform: translateX(-50%) translateY(0) scale(1);
+  opacity: 1;
 }
