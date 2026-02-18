@@ -140,3 +140,11 @@ footer {
   transform: translateX(-50%) translateY(0) scale(1);
   opacity: 1;
 }
+
+/* Responsive staff cards */
+@media screen and (max-width: 768px) {
+  .staff-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
